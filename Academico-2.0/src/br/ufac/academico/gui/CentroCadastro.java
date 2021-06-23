@@ -74,7 +74,7 @@ public class CentroCadastro extends JFrame {
 			super("Confirmar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_C);
 			putValue(SHORT_DESCRIPTION, 
-					"Confirmar opera√ß√£o!");
+					"Confirmar operaÁ„o!");
 			putValue(SMALL_ICON, 
 					new ImageIcon("images/general/Save24.gif"));
 
@@ -116,7 +116,7 @@ public class CentroCadastro extends JFrame {
 			super("Cancelar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_L);
 			putValue(SHORT_DESCRIPTION, 
-					"Cancelar opera√ß√£o!");
+					"Cancelar operaÁ„o!");
 			putValue(SMALL_ICON, 
 					new ImageIcon("images/general/Stop24.gif"));
 
@@ -135,7 +135,7 @@ public class CentroCadastro extends JFrame {
 
 	public void incluir() {
 
-		setTitle("Inclus√£o de Centro");
+		setTitle("Inclus„o de Centro");
 		acao = INCLUSAO;
 		limparCampos();
 		fldSigla.setEnabled(true);
@@ -148,7 +148,7 @@ public class CentroCadastro extends JFrame {
 
 	public void editar(String sigla) {
 
-		setTitle("Edica√ß√£o de Centro");
+		setTitle("EdiÁ„o de Centro");
 		acao = EDICAO;
 		limparCampos();
 		carregarCampos(sigla);
@@ -162,7 +162,7 @@ public class CentroCadastro extends JFrame {
 
 	public void excluir(String sigla) {
 
-		setTitle("Exclus√£o de Centro");
+		setTitle("Exclus„o de Centro");
 		acao = EXCLUSAO;
 		limparCampos();
 		carregarCampos(sigla);

@@ -23,8 +23,8 @@ class AcademicoApp {
 		try {
 			cnx = new Conexao();
 			do {
-				usuario = JOptionPane.showInputDialog("Informe o nome do usu√°rio:");
-				senha = JOptionPane.showInputDialog("Informe a senha do usu√°rio:");
+				usuario = JOptionPane.showInputDialog("Informe o nome do usu·rio:");
+				senha = JOptionPane.showInputDialog("Informe a senha do usu·rio:");
 				conectado = cnx.conecte(urlSchema, usuario, senha);
 
 				tentativas++;

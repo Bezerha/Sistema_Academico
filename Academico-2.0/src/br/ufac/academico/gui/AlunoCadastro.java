@@ -44,10 +44,10 @@ class AlunoCadastro extends JFrame {
 		cl = new CursoLogic(cnx);
 
 		pnlRotulos = new JPanel(new GridLayout(7, 1, 5, 5));
-		pnlRotulos.add(new JLabel("Matr√≠¬≠cula"));
+		pnlRotulos.add(new JLabel("MatrÌcula"));
 		pnlRotulos.add(new JLabel("Nome"));
 		pnlRotulos.add(new JLabel("Fone"));
-		pnlRotulos.add(new JLabel("Ender√ßo"));
+		pnlRotulos.add(new JLabel("EndereÁo"));
 		pnlRotulos.add(new JLabel("CEP"));
 		pnlRotulos.add(new JLabel("Sexo"));
 		pnlRotulos.add(new JLabel("Curso"));
@@ -98,7 +98,7 @@ class AlunoCadastro extends JFrame {
 		AcaoConfirmar() {
 			super("Confirmar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_C);
-			putValue(SHORT_DESCRIPTION, "Confirmar opera√ß√£o!");
+			putValue(SHORT_DESCRIPTION, "Confirmar operaÁ„o!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Save24.gif"));
 
 		}
@@ -137,7 +137,7 @@ class AlunoCadastro extends JFrame {
 				pai.buscar();
 			} catch (NumberFormatException nfe) {
 				// EXCE√á√ÉO LEVANTADA PELO parseLong
-				JOptionPane.showMessageDialog(AlunoCadastro.this, "O campo Matricula devem conter apenas numeros!",
+				JOptionPane.showMessageDialog(AlunoCadastro.this, "O campo Matricula deve conter apenas numeros!",
 						"Academico", JOptionPane.ERROR_MESSAGE);
 			} catch (DataBaseNotConnectedException | DataBaseGenericException | EntityNotExistsException
 					| EntityAlreadyExistsException | EntityInvalidFieldsException err) {
@@ -153,7 +153,7 @@ class AlunoCadastro extends JFrame {
 		AcaoCancelar() {
 			super("Cancelar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_L);
-			putValue(SHORT_DESCRIPTION, "Cancelar opera√ß√£o!");
+			putValue(SHORT_DESCRIPTION, "Cancelar operaÁ„o!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Stop24.gif"));
 
 		}
@@ -170,7 +170,7 @@ class AlunoCadastro extends JFrame {
 
 	public void incluir() {
 
-		setTitle("Inclus√£o de Aluno");
+		setTitle("Inclus„o de Aluno");
 		acao = INCLUSAO;
 		limparCampos();
 		fldMatricula.setEnabled(true);
@@ -188,7 +188,7 @@ class AlunoCadastro extends JFrame {
 
 	public void editar(long matricula) {
 
-		setTitle("Edi√ß√£o de Aluno");
+		setTitle("EdiÁ„o de Aluno");
 		acao = EDICAO;
 		limparCampos();
 		carregarCampos(matricula);
@@ -207,7 +207,7 @@ class AlunoCadastro extends JFrame {
 
 	public void excluir(long matricula) {
 
-		setTitle("Exclus√£o de Aluno");
+		setTitle("Exclus„o de Aluno");
 		acao = EXCLUSAO;
 		limparCampos();
 		carregarCampos(matricula);

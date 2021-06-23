@@ -53,7 +53,7 @@ class AlunoConsulta extends JFrame {
 		pnlRotulos.add(new JLabel("Buscar por"));
 		pnlRotulos.add(new JLabel("Valor"));
 
-		cmbChaves = new JComboBox<String>(new String[] { "Matrí­­cula", "Nome" });
+		cmbChaves = new JComboBox<String>(new String[] { "Matr�cula", "Nome" });
 		fldValor = new JTextField();
 
 		pnlChaves = new JPanel(new GridLayout(2, 1, 5, 5));
@@ -233,7 +233,7 @@ class AlunoConsulta extends JFrame {
 			actExcluir.setEnabled(false);
 		} catch (NumberFormatException nfe) {
 			JOptionPane.showMessageDialog(AlunoConsulta.this,
-					"A Chave de Busca Matrí­cula deve conter apenas nÃºmeros!", "Academico", JOptionPane.ERROR_MESSAGE);
+					"A Chave de Busca Matr�cula deve conter apenas n�meros!", "Academico", JOptionPane.ERROR_MESSAGE);
 		} catch (DataBaseNotConnectedException | DataBaseGenericException | EntityNotExistsException
 				| EntityTableIsEmptyException e) {
 			JOptionPane.showMessageDialog(AlunoConsulta.this, e.getMessage(), "Academico", JOptionPane.ERROR_MESSAGE);

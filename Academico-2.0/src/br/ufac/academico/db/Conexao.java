@@ -21,7 +21,7 @@ public class Conexao {
 		try {
 			Class.forName(urlDriver);
 		} catch (ClassNotFoundException e) {
-			throw new DataBaseGenericException(404, "Driver n√£o encontrado: " + e.getMessage());
+			throw new DataBaseGenericException(404, "Driver n„o encontrado: " + e.getMessage());
 		}
 	}
 
@@ -37,7 +37,7 @@ public class Conexao {
 				this.urlSchema = urlSchema;
 				con = DriverManager.getConnection(urlSchema, userName, userPass);				
 				conectado = true;
-				System.out.printf("Conex√£o com (%s) estabelecida com sucesso!\n", urlSchema);
+				System.out.printf("Conex„o com (%s) estabelecida com sucesso!\n", urlSchema);
 			} catch (SQLException e) {
 				conectado = false;
 				if (e.getErrorCode() == 1045) {
@@ -60,7 +60,7 @@ public class Conexao {
 			try {
 				con.close();
 				conectado = false;
-				System.out.printf("Conex√£o com (%s) encerrada com sucesso!\n", urlSchema);
+				System.out.printf("Conex„o com (%s) encerrada com sucesso!\n", urlSchema);
 			} catch (SQLException e) {
 				conectado = true;
 				throw new DataBaseGenericException(e.getErrorCode(), e.getMessage());						
@@ -100,7 +100,7 @@ public class Conexao {
 			try {
 				stm = con.createStatement();
 				linhasAfetadas = stm.executeUpdate(sqlAtualiza);				
-				System.out.printf("Atualiza√ß√£o (%s) realizada com sucesso!\n", sqlAtualiza);				
+				System.out.printf("AtualizaÁ„o (%s) realizada com sucesso!\n", sqlAtualiza);				
 			} catch (SQLException e) {
 				linhasAfetadas = -1;				
 				throw new DataBaseGenericException(e.getErrorCode(), e.getMessage());						

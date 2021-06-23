@@ -26,7 +26,7 @@ public class AlunoTableModel extends AbstractTableModel{
 
         switch (column) {
         case 0:
-            nomeDaColuna = "MatrÃ­cula";
+            nomeDaColuna = "Matrícula";
             break;
         case 1:
             nomeDaColuna = "Nome";
@@ -35,7 +35,7 @@ public class AlunoTableModel extends AbstractTableModel{
             nomeDaColuna = "Fone";
             break;
         case 3:
-            nomeDaColuna = "EndereÃ§o";
+            nomeDaColuna = "Endereço";
             break;
         case 4:
             nomeDaColuna = "CEP";

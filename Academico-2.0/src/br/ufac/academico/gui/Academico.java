@@ -193,7 +193,7 @@ public class Academico extends JFrame {
 		AcaoSobre() {
 			super("Sobre...");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_E);
-			putValue(SHORT_DESCRIPTION, "Sobre o Carteado!");
+			putValue(SHORT_DESCRIPTION, "Sobre o Sistema!");
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_DOWN_MASK));
 			putValue(SMALL_ICON, new ImageIcon("images/general/About24.gif"));
 		}
@@ -201,8 +201,8 @@ public class Academico extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(Academico.this,
-					"Sistema de Controle AcadÃªmico\n" + "Desenvolvido em Sala de Aula\n" + "Professor Macilon.",
-					"AcadÃªmico", JOptionPane.INFORMATION_MESSAGE);
+					"Sistema de Controle Acadêmico\n" + "Desenvolvido por Felipe Bezerra e Gabriel Batista",
+					"Acadêmico", JOptionPane.INFORMATION_MESSAGE);
 		}
 
 	}
