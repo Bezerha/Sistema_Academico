@@ -43,7 +43,7 @@
 		String cod = request.getParameter("curso");
 		curso = cl.recuperar(Integer.parseInt(cod));
 		String descricao = request.getParameter("descricao");
-		cll.atualizar(codigo, curso, descricao);
+		cll.adicionar(codigo, curso, descricao);
 		
 %>
 <jsp:forward page="curriculoListar.jsp" />

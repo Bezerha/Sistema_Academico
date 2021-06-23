@@ -1,16 +1,16 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.ufac.academico.entity.Aluno"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@page errorPage="erro.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page errorPage="erro.jsp"%>
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
 <jsp:useBean id="al" scope="page" class="br.ufac.academico.logic.AlunoLogic" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -54,14 +54,14 @@
 	}
 %>
 
-<h1>Sistema de Controle Acadêmico</h1>
+<h1>Sistema de Controle AcadÃªmico</h1>
 <h2>Consulta Alunos</h2>
 <form action="alunoListar.jsp" method="post">
 <p>
 	Chave: 
 	<select name="chave">
 		<option value="nome">Nome</option>
-		<option value="matricula">Matrícula</option>		
+		<option value="matricula">MatrÃ­cula</option>		
 	</select>
 	Valor: <input type="text" name="valor" />
 	<input type="submit" name="buscar" value="Buscar" />
@@ -71,10 +71,10 @@
 </form>
 <table border="1">
 	<tr>
-		<th>Matrícula</th>
+		<th>MatrÃ­cula</th>
 		<th>Nome</th>
 		<th>Curso</th>
-		<th>Operações</th>
+		<th>OperaÃ§Ãµes</th>
 	</tr>
 <%
 	for(Aluno a : alunos){

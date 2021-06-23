@@ -48,7 +48,7 @@ public class AlunoLogic {
 		if (nome.isEmpty() || nome.length() > 50) {
 			campos.add("Nome = '" + nome + "'");
 		}
-		if (fone.isEmpty() || nome.length() > 11) {
+		if (fone.isEmpty() || fone.length() > 11) {
 			campos.add("Fone = '" + fone + "'");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
@@ -89,7 +89,8 @@ public class AlunoLogic {
 
 	public void atualizar(long matricula, String nome, String fone, String endereco, String cep, String sexo,
 			Curso curso) throws DataBaseNotConnectedException, DataBaseGenericException, EntityAlreadyExistsException,
-			EntityInvalidFieldsException, EntityNotExistsException {
+			EntityInvalidFieldsException, EntityNotExistsException 
+	{
 
 		List<String> campos = new ArrayList<String>();
 		Aluno aluno = null;
@@ -97,7 +98,7 @@ public class AlunoLogic {
 		if (nome.isEmpty() || nome.length() > 50) {
 			campos.add("Nome = '" + nome + "'");
 		}
-		if (fone.isEmpty() || nome.length() > 11) {
+		if (fone.isEmpty() || fone.length() > 11) {
 			campos.add("Fone = '" + fone + "'");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {

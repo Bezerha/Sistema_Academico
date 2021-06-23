@@ -64,16 +64,16 @@
 
 %>
 <h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de Aluno</h2>
-<form action="alunoEditar.jsp" method="post">
+<h2>Exclusão de Aluno</h2>
+<form action="alunoExcluir.jsp" method="post">
 <p>
 	Matrícula: <input type="text" name="matricula" value="<%= a.getMatricula() %>" readonly="readonly" /> <br/>
-	Nome: <input type="text" name="nome" value="<%= a.getNome() %>" /> <br/>
-	Telefone: <input type="text" name="fone" value="<%= a.getFone() %>" /> <br/>
-	Endereço: <input type="text" name="endereco" value="<%= a.getEndereco() %>" /> <br/>
-	CEP: <input type="text" name="cep" value="<%= a.getCep() %>" /> <br/>	
-	Sexo: <input type="text" name="sexo" value="<%= a.getFone() %>" /> <br/>
-	Curso: <select name="curso">
+	Nome: <input type="text" name="nome" value="<%= a.getNome() %>" readonly="readonly" /> <br/>
+	Telefone: <input type="text" name="fone" value="<%= a.getFone() %>" readonly="readonly" /> <br/>
+	Endereço: <input type="text" name="endereco" value="<%= a.getEndereco() %>" readonly="readonly" /> <br/>
+	CEP: <input type="text" name="cep" value="<%= a.getCep() %>" readonly="readonly" /> <br/>	
+	Sexo: <input type="text" name="sexo" value="<%= a.getFone() %>" readonly="readonly" /> <br/>
+	Curso: <select name="curso" disabled="disabled" >
 <%
 	for(Curso c : cursos){
 %>

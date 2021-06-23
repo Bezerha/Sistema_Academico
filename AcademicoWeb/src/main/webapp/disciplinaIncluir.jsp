@@ -44,7 +44,7 @@
 		int ch = Integer.parseInt(request.getParameter("ch"));
 		String sigla = request.getParameter("centro");
 		centro = cl.recuperar(sigla);
-		dl.atualizar(codigo, nome, ch, centro);
+		dl.adicionar(codigo, nome, ch, centro);
 		
 %>
 <jsp:forward page="disciplinaListar.jsp" />
