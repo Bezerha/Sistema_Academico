@@ -41,7 +41,7 @@
 		String valor = request.getParameter("valor");
 	
 		if (valor.isEmpty()){
-			disciplinas = dl.recuperarTodosPorNome();
+			disciplinas = dl.recuperarTodosPorNomeContendo("");
 		}else{
 			if(chave.equals("codigo")){
 				String codigo = valor;
@@ -51,7 +51,7 @@
 			}
 		}
 	}else{
-		disciplinas = dl.recuperarTodos();
+		disciplinas = dl.recuperarTodosPorNomeContendo("");
 	}
 %>
 

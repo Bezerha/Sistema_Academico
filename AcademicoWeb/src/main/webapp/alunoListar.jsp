@@ -31,17 +31,16 @@
 %>
 
 <%
-
 	List<Aluno> alunos = new ArrayList<Aluno>();
 	al.setConexao(cnx);
-
+	
 	if(request.getParameter("buscar") != null){
 		
 		String chave = request.getParameter("chave"); 
 		String valor = request.getParameter("valor");
 	
 		if (valor.isEmpty()){
-			alunos = al.recuperarTodosPorNome();
+			alunos = al.recuperarTodosPorNomeContendo("");
 		}else{
 			if(chave.equals("matricula")){
 				long matricula = Long.parseLong(valor);
@@ -50,13 +49,13 @@
 				alunos = al.recuperarTodosPorNomeContendo(valor);
 			}
 		}
-	}else{
-		alunos = al.recuperarTodos();
+	}else{	
+		alunos = al.recuperarTodosPorNomeContendo("");
 	}
 %>
 
 <h1>Sistema de Controle Acadêmico</h1>
-<h2>Consulta Alunoes</h2>
+<h2>Consulta Alunos</h2>
 <form action="alunosListar.jsp" method="post">
 <p>
 	Chave: 

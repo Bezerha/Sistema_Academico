@@ -42,16 +42,16 @@
 		String valor = request.getParameter("valor");
 	
 		if (valor.isEmpty()){
-			cursos = cul.recuperarTodosPorNome();
+			cursos = cul.recuperarTodosPorNomeContendo("");
 		}else{
 			if(chave.equals("codigo")){
 				cursos.add(cul.recuperar(Integer.parseInt(valor)));
 			}else{
-				cursos = cul.recuperarTodosPorNomeContendo(valor);
+				cursos = cul.recuperarTodosPorNomeContendo("");
 			}
 		}
 	}else{
-		cursos = cul.recuperarTodos();
+		cursos = cul.recuperarTodosPorNomeContendo("");
 	}
 %>
 

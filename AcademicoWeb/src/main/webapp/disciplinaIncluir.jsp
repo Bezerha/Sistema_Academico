@@ -41,7 +41,7 @@
 	if(request.getParameter("confirmar") != null){
 		String codigo = request.getParameter("codigo"); 
 		String nome = request.getParameter("nome");
-		int ch = Integer.parseInt(request.getParameter("rg"));
+		int ch = Integer.parseInt(request.getParameter("ch"));
 		String sigla = request.getParameter("centro");
 		centro = cl.recuperar(sigla);
 		dl.atualizar(codigo, nome, ch, centro);

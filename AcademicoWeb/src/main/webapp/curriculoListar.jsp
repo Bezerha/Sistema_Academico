@@ -41,7 +41,7 @@
 		String valor = request.getParameter("valor");
 	
 		if (valor.isEmpty()){
-			curriculos = cl.recuperarTodosPorNome();
+			curriculos = cl.recuperarTodosPorNomeContendo("");
 		}else{
 			if(chave.equals("codigo")){
 				long codigo = Long.parseLong(valor);
@@ -51,7 +51,7 @@
 			}
 		}
 	}else{
-		curriculos = cl.recuperarTodos();
+		curriculos = cl.recuperarTodosPorNomeContendo("");
 	}
 %>
 

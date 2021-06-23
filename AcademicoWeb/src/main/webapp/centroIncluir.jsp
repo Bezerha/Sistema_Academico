@@ -7,7 +7,7 @@
 <jsp:useBean id="cl" scope="page" class="br.ufac.academico.logic.CentroLogic" />
 <head>
 <meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<title>Sistema de Controle Acadêmicooo</title>
 </head>
 <body>
 

@@ -41,7 +41,7 @@
 		String valor = request.getParameter("valor");
 	
 		if (valor.isEmpty()){
-			professores = pl.recuperarTodosPorNome();
+			professores = pl.recuperarTodosPorNomeContendo("");
 		}else{
 			if(chave.equals("matricula")){
 				long matricula = Long.parseLong(valor);
@@ -51,7 +51,7 @@
 			}
 		}
 	}else{
-		professores = pl.recuperarTodos();
+		professores = pl.recuperarTodosPorNomeContendo("");
 	}
 %>
 

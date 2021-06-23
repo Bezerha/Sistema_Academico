@@ -41,16 +41,16 @@
 		String valor = request.getParameter("valor");
 	
 		if (valor.isEmpty()){
-			centros = cl.recuperarTodosPorNome();
+			centros = cl.recuperarTodosPorNomeContendo("");
 		}else{
 			if(chave.equals("sigla")){
 				centros.add(cl.recuperar(valor));
 			}else{
-				centros = cl.recuperarTodosPorNomeContendo(valor);
+				centros = cl.recuperarTodosPorNomeContendo("");
 			}
 		}
 	}else{
-		centros = cl.recuperarTodos();
+		centros = cl.recuperarTodosPorNomeContendo("");
 	}
 %>
 
