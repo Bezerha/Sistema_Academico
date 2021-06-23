@@ -2,7 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page errorPage="erro.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
@@ -79,7 +79,7 @@
 	Telefone: <input type="text" name="fone" value="<%= a.getFone() %>" /> <br/>
 	Endereço: <input type="text" name="endereco" value="<%= a.getEndereco() %>" /> <br/>
 	CEP: <input type="text" name="cep" value="<%= a.getCep() %>" /> <br/>	
-	Sexo: <input type="text" name="sexo" value="<%= a.getFone() %>" /> <br/>
+	Sexo: <input type="text" name="sexo" value="<%= a.getSexo() %>" /> <br/>
 	Curso: <select name="curso">
 <%
 	for(Curso c : cursos){

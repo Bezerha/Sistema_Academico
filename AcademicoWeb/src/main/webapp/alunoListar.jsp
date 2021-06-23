@@ -85,7 +85,7 @@
 		<td><%= a.getCurso().getCodigo() %></td>
 		<td>
 			<a href="alunoEditar.jsp?matricula=<%= a.getMatricula() %>">Editar</a>
-			<a href="alunoEditar.jsp?matricula=<%= a.getMatricula() %>">Excluir</a>
+			<a href="alunoExcluir.jsp?matricula=<%= a.getMatricula() %>">Excluir</a>
 		</td>
 	</tr>
 <%

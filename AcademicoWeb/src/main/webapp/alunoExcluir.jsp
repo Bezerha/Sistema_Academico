@@ -1,8 +1,8 @@
 <%@page import="br.ufac.academico.entity.Curso"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@page errorPage="erro.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
@@ -12,7 +12,7 @@
 <jsp:useBean id="a" scope="page" class="br.ufac.academico.entity.Aluno" />
 <head>
 <meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -63,14 +63,14 @@
  	}
 
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Exclusão de Aluno</h2>
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>ExclusÃ£o de Aluno</h2>
 <form action="alunoExcluir.jsp" method="post">
 <p>
-	Matrícula: <input type="text" name="matricula" value="<%= a.getMatricula() %>" readonly="readonly" /> <br/>
+	MatrÃ­cula: <input type="text" name="matricula" value="<%= a.getMatricula() %>" readonly="readonly" /> <br/>
 	Nome: <input type="text" name="nome" value="<%= a.getNome() %>" readonly="readonly" /> <br/>
 	Telefone: <input type="text" name="fone" value="<%= a.getFone() %>" readonly="readonly" /> <br/>
-	Endereço: <input type="text" name="endereco" value="<%= a.getEndereco() %>" readonly="readonly" /> <br/>
+	EndereÃ§o: <input type="text" name="endereco" value="<%= a.getEndereco() %>" readonly="readonly" /> <br/>
 	CEP: <input type="text" name="cep" value="<%= a.getCep() %>" readonly="readonly" /> <br/>	
 	Sexo: <input type="text" name="sexo" value="<%= a.getFone() %>" readonly="readonly" /> <br/>
 	Curso: <select name="curso" disabled="disabled" >
