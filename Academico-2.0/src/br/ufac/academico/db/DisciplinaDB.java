@@ -35,7 +35,7 @@ public class DisciplinaDB {
 
 		String sqlAtualize = "INSERT INTO disciplinas (codigo, nome, ch, centro) "
 				+ "VALUES ('"
-				+ 		disciplina.getCodigo() 	+"',"
+				+ 		disciplina.getCodigo() 		+"', "
 				+ "'" + disciplina.getNome() 		+ "', "
 				+ "" + 	disciplina.getCh() 			+ ", "
 				+ "'"+ 	disciplina.getCentro().getSigla() +"');";

@@ -96,7 +96,7 @@ public class AlunoDB {
 			
 		try {
 			if(rs.next()) {				
-				curso = cdb.recuperar(rs.getInt(6));
+				curso = cdb.recuperar(rs.getInt(7));
 				aluno = new Aluno(rs.getLong(1), rs.getString(2), 
 						rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), curso);
 			}else {
@@ -130,7 +130,7 @@ public class AlunoDB {
 		
 		try {
 			while(rs.next()) {
-				curso = cdb.recuperar(rs.getInt(6));
+				curso = cdb.recuperar(rs.getInt(7));
 				aluno = new Aluno(rs.getLong(1), rs.getString(2), 
 						rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), curso);
 				alunos.add(aluno);
@@ -154,7 +154,8 @@ public class AlunoDB {
                 + "fone AS 'Telefone', "
                 + "endereco AS 'Endereço', "
                 + "cep AS 'CEP', "		
-                + "sexo AS 'Sexo' "
+                + "sexo AS 'Sexo', "
+                + "curso AS 'Curso' "
                 + "FROM alunos "
 				+ "ORDER BY nome;";
 
@@ -166,7 +167,7 @@ public class AlunoDB {
 		
 		try {
 			while(rs.next()) {
-				curso = cdb.recuperar(rs.getInt(6));
+				curso = cdb.recuperar(rs.getInt(7));
 				aluno = new Aluno(rs.getLong(1), rs.getString(2), 
 						rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), curso);
 				alunos.add(aluno);
@@ -190,7 +191,8 @@ public class AlunoDB {
                 + "fone AS 'Telefone', "
                 + "endereco AS 'Endereço', "
                 + "cep AS 'CEP', "		
-                + "sexo AS 'Sexo' "
+                + "sexo AS 'Sexo', "
+                + "curso AS 'Curso' "
                 + "FROM alunos "
 				+ "WHERE nome like '%" + nome + "%' "
 				+ "ORDER BY nome;";
@@ -204,7 +206,7 @@ public class AlunoDB {
 		try {
 			while(rs.next()) {
 				
-				curso = cdb.recuperar(rs.getInt(6));
+				curso = cdb.recuperar(rs.getInt(7));
 				aluno = new Aluno(rs.getLong(1), rs.getString(2), 
 						rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), curso);
 				alunos.add(aluno);

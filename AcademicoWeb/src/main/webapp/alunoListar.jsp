@@ -56,7 +56,7 @@
 
 <h1>Sistema de Controle Acadêmico</h1>
 <h2>Consulta Alunos</h2>
-<form action="alunosListar.jsp" method="post">
+<form action="alunoListar.jsp" method="post">
 <p>
 	Chave: 
 	<select name="chave">

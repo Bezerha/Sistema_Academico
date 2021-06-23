@@ -56,7 +56,7 @@
 
 <h1>Sistema de Controle Acadêmico</h1>
 <h2>Consulta curriculos</h2>
-<form action="curriculosListar.jsp" method="post">
+<form action="curriculoListar.jsp" method="post">
 <p>
 	Chave: 
 	<select name="chave">

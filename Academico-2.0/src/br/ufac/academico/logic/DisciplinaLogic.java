@@ -63,7 +63,7 @@ public class DisciplinaLogic {
 		try {
 			disciplina  = recuperar(codigo);
 			if(disciplina != null) {
-				throw new EntityAlreadyExistsException("Disciplina [codigo = " + codigo + "]");
+				throw new EntityAlreadyExistsException("Disciplina [codigo = '" + codigo + "']");
 			}			
 		} catch (EntityNotExistsException e) {
 			disciplina = new Disciplina (codigo, nome, ch, centro);
@@ -90,7 +90,7 @@ public class DisciplinaLogic {
 		Disciplina disciplina = null;
 
 		
-		if (nome.isEmpty() || nome.length() > 50) {
+		if (nome.isEmpty() || nome.length() > 60) {
 			campos.add("Nome = '" + nome + "'");
 		}
 		if (ch <= 0) {
