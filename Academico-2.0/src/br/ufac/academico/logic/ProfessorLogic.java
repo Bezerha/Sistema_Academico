@@ -46,20 +46,20 @@ public class ProfessorLogic {
 		Professor professor = null;
 
 		if (matricula <= 0) {
-			campos.add("MatrÃ­cula = " + matricula + "");
+			campos.add("Matrícula = " + matricula + "");
 		}
 
 		if (nome.isEmpty() || nome.length() > 50) {
 			campos.add("Nome = '" + nome + "'");
 		}
 		if (rg <= 0) {
-			campos.add("RG = " + rg + "");
+			campos.add("RG = " + rg );
 		}
 		if (cpf <= 0) {
-			campos.add("CPF = " + cpf + "");
+			campos.add("CPF = " + cpf );
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
-			campos.add("EndereÃ§o = '" + endereco + "'");
+			campos.add("Endereço = '" + endereco + "'");
 		}
 		if (fone.isEmpty() || fone.length() > 11) {
 			campos.add("Telefone = '" + fone + "'");

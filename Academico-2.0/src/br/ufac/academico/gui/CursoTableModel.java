@@ -30,7 +30,7 @@ public class CursoTableModel extends AbstractTableModel {
 		
 		switch (column) {
 		case 0:
-			nomeDaColuna = "Codigo";
+			nomeDaColuna = "Código";
 			break;
 		case 1:
 			nomeDaColuna = "Nome";

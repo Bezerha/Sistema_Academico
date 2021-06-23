@@ -43,7 +43,7 @@ public class AlunoLogic {
 		Aluno aluno = null;
 
 		if (matricula <= 0) {
-			campos.add("MatrÃ­cula = " + matricula + "");
+			campos.add("Matr�cula = " + matricula + "");
 		}
 		if (nome.isEmpty() || nome.length() > 50) {
 			campos.add("Nome = '" + nome + "'");
@@ -52,7 +52,7 @@ public class AlunoLogic {
 			campos.add("Fone = " + fone + "");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
-			campos.add("EndereÃ§o = '" + endereco + "'");
+			campos.add("Endere�o = '" + endereco + "'");
 		}
 		if (cep.isEmpty() || endereco.length() > 7) {
 			campos.add("CEP = '" + cep + "'");

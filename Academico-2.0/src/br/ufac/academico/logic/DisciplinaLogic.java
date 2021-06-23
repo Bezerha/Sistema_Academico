@@ -43,12 +43,14 @@ public class DisciplinaLogic {
 
 		List<String> campos = new ArrayList<String>();
 		Disciplina disciplina = null;
-
-		if (nome.isEmpty() || nome.length() > 50) {
+		if (codigo.isEmpty() || codigo.length() > 8) {
+			campos.add("Código = '" + codigo + "'");
+		}
+		if (nome.isEmpty() || nome.length() > 60) {
 			campos.add("Nome = '" + nome + "'");
 		}
 		if (ch <= 0) {
-			campos.add("Ch = " + ch + "");
+			campos.add("Ch = " + ch );
 		}
 		try {
 			centro = cl.recuperar(centro.getSigla());
@@ -87,9 +89,7 @@ public class DisciplinaLogic {
 		List<String> campos = new ArrayList<String>();
 		Disciplina disciplina = null;
 
-		if (codigo.isEmpty() || codigo.length() > 8) {
-			campos.add("Codigo = '" + codigo + "'");
-
+		
 		if (nome.isEmpty() || nome.length() > 50) {
 			campos.add("Nome = '" + nome + "'");
 		}
@@ -118,7 +118,6 @@ public class DisciplinaLogic {
 		ddb.atualizar(disciplina);
 		}
 		
-	}
 
 	public void remover(String codigo) 
 	throws DataBaseNotConnectedException, DataBaseGenericException, 

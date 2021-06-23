@@ -44,7 +44,7 @@ class DisciplinaCadastro extends JFrame {
 		cl = new CentroLogic(cnx);
 
 		pnlRotulos = new JPanel(new GridLayout(4, 1, 5, 5));
-		pnlRotulos.add(new JLabel("C√≥digo"));
+		pnlRotulos.add(new JLabel("CÛdigo"));
 		pnlRotulos.add(new JLabel("Nome"));
 		pnlRotulos.add(new JLabel("CH"));
 		pnlRotulos.add(new JLabel("Centro"));
@@ -90,7 +90,7 @@ class DisciplinaCadastro extends JFrame {
 		AcaoConfirmar() {
 			super("Confirmar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_C);
-			putValue(SHORT_DESCRIPTION, "Confirmar opera√ß√£o!");
+			putValue(SHORT_DESCRIPTION, "Confirmar operaÁ„o!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Save24.gif"));
 
 		}
@@ -127,7 +127,7 @@ class DisciplinaCadastro extends JFrame {
 			} catch (NumberFormatException nfe) {
 				// EXCE√á√ÉO LEVANTADA PELO parseLong
 				JOptionPane.showMessageDialog(DisciplinaCadastro.this,
-						"Os campos Matr√≠cula, RG e CPF, devem conter apenas n√∫meros!", "Academico",
+						"Os campos MatrÌcula, RG e CPF, devem conter apenas n˙meros!", "Academico",
 						JOptionPane.ERROR_MESSAGE);
 			} catch (DataBaseNotConnectedException | DataBaseGenericException | EntityNotExistsException
 					| EntityAlreadyExistsException | EntityInvalidFieldsException err) {
@@ -143,7 +143,7 @@ class DisciplinaCadastro extends JFrame {
 		AcaoCancelar() {
 			super("Cancelar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_L);
-			putValue(SHORT_DESCRIPTION, "Cancelar opera√ß√£o!");
+			putValue(SHORT_DESCRIPTION, "Cancelar operaÁ„o!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Stop24.gif"));
 
 		}
@@ -160,7 +160,7 @@ class DisciplinaCadastro extends JFrame {
 
 	public void incluir() {
 
-		setTitle("Inclus√£o de Disciplina");
+		setTitle("Inclus„o de Disciplina");
 		acao = INCLUSAO;
 		limparCampos();
 		fldCodigo.setEnabled(true);
@@ -175,7 +175,7 @@ class DisciplinaCadastro extends JFrame {
 
 	public void editar(String codigo) {
 
-		setTitle("Edi√ß√£o de Disciplina");
+		setTitle("EdiÁ„o de Disciplina");
 		acao = EDICAO;
 		limparCampos();
 		carregarCampos(codigo);
@@ -191,7 +191,7 @@ class DisciplinaCadastro extends JFrame {
 
 	public void excluir(String codigo) {
 
-		setTitle("Exclus√£o de Disciplina");
+		setTitle("Exclus„o de Disciplina");
 		acao = EXCLUSAO;
 		limparCampos();
 		carregarCampos(codigo);

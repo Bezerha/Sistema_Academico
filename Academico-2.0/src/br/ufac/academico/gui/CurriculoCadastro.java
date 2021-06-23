@@ -58,7 +58,7 @@ public class CurriculoCadastro extends JFrame {
 		pnlRotulos = new JPanel(new GridLayout(3, 1, 5, 5));
 		pnlRotulos.add(new JLabel("Codigo"));
 		pnlRotulos.add(new JLabel("Curso"));
-		pnlRotulos.add(new JLabel("Descriï¿½ï¿½o"));
+		pnlRotulos.add(new JLabel("Descrição"));
 
 		fldCodigo = new JTextField();
 		fldCurso = new JTextField();
@@ -101,7 +101,7 @@ public class CurriculoCadastro extends JFrame {
 		AcaoConfirmar() {
 			super("Confirmar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_C);
-			putValue(SHORT_DESCRIPTION, "Confirmar operaÃ§Ã£o!");
+			putValue(SHORT_DESCRIPTION, "Confirmar operação!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Save24.gif"));
 
 		}
@@ -136,7 +136,7 @@ public class CurriculoCadastro extends JFrame {
 
 			} catch (NumberFormatException nfe) {
 				// EXCEÃ‡ÃƒO LEVANTADA PELO parseLong
-				JOptionPane.showMessageDialog(CurriculoCadastro.this, "O campo Codigo devem conter apenas nÃºmeros!",
+				JOptionPane.showMessageDialog(CurriculoCadastro.this, "O campo codigo deve conter apenas números!",
 						"Academico", JOptionPane.ERROR_MESSAGE);
 			} catch (DataBaseNotConnectedException | DataBaseGenericException | EntityNotExistsException
 					| EntityAlreadyExistsException | EntityInvalidFieldsException err) {
@@ -152,7 +152,7 @@ public class CurriculoCadastro extends JFrame {
 		AcaoCancelar() {
 			super("Cancelar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_L);
-			putValue(SHORT_DESCRIPTION, "Cancelar operaÃ§Ã£o!");
+			putValue(SHORT_DESCRIPTION, "Cancelar operação!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Stop24.gif"));
 
 		}
@@ -169,7 +169,7 @@ public class CurriculoCadastro extends JFrame {
 
 	public void incluir() {
 
-		setTitle("InclusÃ£o de Codigo");
+		setTitle("Inclusão de Codigo");
 		acao = INCLUSAO;
 		limparCampos();
 		fldCodigo.setEnabled(true);
@@ -183,7 +183,7 @@ public class CurriculoCadastro extends JFrame {
 
 	public void editar(long codigo) {
 
-		setTitle("EdicaÃ§Ã£o de Codigo");
+		setTitle("Edição de Codigo");
 		acao = EDICAO;
 		limparCampos();
 		carregarCampos(codigo);
@@ -198,7 +198,7 @@ public class CurriculoCadastro extends JFrame {
 
 	public void excluir(long codigo) {
 
-		setTitle("ExclusÃ£o de Codigo");
+		setTitle("Exclusão de Codigo");
 		acao = EXCLUSAO;
 		limparCampos();
 		carregarCampos(codigo);

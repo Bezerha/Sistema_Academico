@@ -47,13 +47,13 @@ public class CurriculoLogic {
 		}
 		
 		if (descricao.isEmpty() || descricao.length() > 45) {
-			campos.add("DescriÃ§Ã£o= '" + descricao + "'");
+			campos.add("Descrição= '" + descricao + "'");
 		}
 		
 		try {
 			curso = cl.recuperar(curso.getCodigo());
 		} catch (EntityNotExistsException | NullPointerException e) {
-			campos.add("curso = '" + curso + "'");
+			campos.add("Curso = " + curso );
 		}
 		if (campos.size() > 0) {
 			throw new EntityInvalidFieldsException("Curriculos", campos);
@@ -88,14 +88,14 @@ public class CurriculoLogic {
 		Curriculo curriculo = null;
 		
 		if (descricao.isEmpty() || descricao.length() > 45) {
-			campos.add("DescriÃ§Ã£o= '" + descricao + "'");
+			campos.add("Descrição= '" + descricao + "'");
 		}
 		
 
 		try {
 			curso = cl.recuperar(curso.getCodigo());
 		} catch (EntityNotExistsException | NullPointerException e) {
-			campos.add("curso = '" + curso + "'");
+			campos.add("Curso = " + curso + "");
 		}
 		if (campos.size() > 0) {
 			throw new EntityInvalidFieldsException("Curriculos", campos);

@@ -73,7 +73,7 @@ public class CursoCadastro extends JFrame {
 		AcaoConfirmar() {
 			super("Confirmar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_C);
-			putValue(SHORT_DESCRIPTION, "Confirmar operaï¿½ï¿½o!");
+			putValue(SHORT_DESCRIPTION, "Confirmar operação!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Save24.gif"));
 
 		}
@@ -114,7 +114,7 @@ public class CursoCadastro extends JFrame {
 		AcaoCancelar() {
 			super("Cancelar");
 			putValue(MNEMONIC_KEY, KeyEvent.VK_L);
-			putValue(SHORT_DESCRIPTION, "Cancelar operaï¿½ï¿½o!");
+			putValue(SHORT_DESCRIPTION, "Cancelar operação!");
 			putValue(SMALL_ICON, new ImageIcon("images/general/Stop24.gif"));
 
 		}
@@ -132,7 +132,7 @@ public class CursoCadastro extends JFrame {
 
 	public void incluir() {
 
-		setTitle("Inclusï¿½o de Curso");
+		setTitle("Inclusão de Curso");
 		acao = INCLUSAO;
 		limparCampos();
 		fldCodigo.setEnabled(true);
@@ -145,7 +145,7 @@ public class CursoCadastro extends JFrame {
 
 	public void editar(int codigo) {
 
-		setTitle("Edicaï¿½ï¿½o de Curso");
+		setTitle("Edição de Curso");
 		acao = EDICAO;
 		limparCampos();
 		carregarCampos(codigo);
@@ -159,7 +159,7 @@ public class CursoCadastro extends JFrame {
 
 	public void excluir(int codigo) {
 
-		setTitle("Exclusï¿½o de Curso");
+		setTitle("Exclusão de Curso");
 		acao = EXCLUSAO;
 		limparCampos();
 		carregarCampos(codigo);
