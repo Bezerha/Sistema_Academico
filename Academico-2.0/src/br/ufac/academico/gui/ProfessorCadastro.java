@@ -62,8 +62,7 @@ class ProfessorCadastro extends JFrame {
 		try {
 			cmbCentro = new JComboBox<Centro>(cl.recuperarTodosPorNome().toArray(new Centro[0]));
 		} catch (DataBaseNotConnectedException | DataBaseGenericException | EntityTableIsEmptyException e) {
-			JOptionPane.showMessageDialog(ProfessorCadastro.this, e.getMessage(),
-					"Academico", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(ProfessorCadastro.this, e.getMessage(), "Academico", JOptionPane.ERROR_MESSAGE);
 		}
 
 		pnlCampos = new JPanel(new GridLayout(7,1,5,5));

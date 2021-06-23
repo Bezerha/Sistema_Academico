@@ -162,17 +162,17 @@ public class CurriculoDB {
 		return curriculos;
 	}
 	
-	public List<Curriculo> recuperarTodosPorNomeContendo(String nome) 
+	public List<Curriculo> recuperarTodosPorNomeContendo(String descricao) 
 	throws DataBaseNotConnectedException, DataBaseGenericException, 
 		EntityNotExistsException 
 	{
 		
 		String sqlConsulta = "SELECT codigo AS 'Código', "
 				+ "curso AS 'Curso', "
-				+ "descricao AS 'Descrição', "
+				+ "descricao AS 'Descrição' "
 				+ "FROM curriculos "
-				+ "WHERE nome like '%" + nome + "%' "
-				+ "ORDER BY nome;";
+				+ "WHERE descricao like '%" + descricao + "%' "
+				+ "ORDER BY descricao;";
 
 		List<Curriculo> curriculos = new ArrayList<Curriculo>();
 		Curriculo curriculo = null;

@@ -49,12 +49,12 @@ public class AlunoLogic {
 			campos.add("Nome = '" + nome + "'");
 		}
 		if (fone.isEmpty() || nome.length() > 11) {
-			campos.add("Fone = " + fone + "");
+			campos.add("Fone = '" + fone + "'");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
 			campos.add("Endereço = '" + endereco + "'");
 		}
-		if (cep.isEmpty() || endereco.length() > 7) {
+		if (cep.isEmpty() || cep.length() > 7) {
 			campos.add("CEP = '" + cep + "'");
 		}
 		if (sexo.isEmpty() || sexo.length() > 1) {
@@ -98,12 +98,12 @@ public class AlunoLogic {
 			campos.add("Nome = '" + nome + "'");
 		}
 		if (fone.isEmpty() || nome.length() > 11) {
-			campos.add("Fone = " + fone + "");
+			campos.add("Fone = '" + fone + "'");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
-			campos.add("EndereÃƒÂ§o = '" + endereco + "'");
+			campos.add("Endereço = '" + endereco + "'");
 		}
-		if (cep.isEmpty() || endereco.length() > 7) {
+		if (cep.isEmpty() || cep.length() > 7) {
 			campos.add("CEP = '" + cep + "'");
 		}
 		if (sexo.isEmpty() || sexo.length() > 1) {

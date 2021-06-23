@@ -27,7 +27,7 @@
 <%
 	if(request.getParameter("cancelar") != null){
 %>
-<jsp:forward page="alunoListar.jsp" />
+<jsp:forward page="curriculoListar.jsp" />
 <%
 	}
 %>
@@ -46,7 +46,7 @@
 		cll.atualizar(codigo, curso, descricao);
 		
 %>
-<jsp:forward page="alunoListar.jsp" />
+<jsp:forward page="curriculoListar.jsp" />
 <%
 	}
 %>
@@ -54,8 +54,8 @@
 	List<Curso> cursos = cl.recuperarTodosPorNome();
 %>
 <h1>Sistema de Controle Acadêmico</h1>
-<h2>Inclusão de Aluno</h2>
-<form action="alunoIncluir" method="post">
+<h2>Inclusão de curriculo</h2>
+<form action="curriculoIncluir" method="post">
 <p>
 	Código: <input type="text" name="codigo" /> <br/>
 	Descrição: <input type="text" name="descricao" /> <br/>

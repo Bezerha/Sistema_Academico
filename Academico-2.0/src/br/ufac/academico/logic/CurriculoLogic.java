@@ -47,8 +47,8 @@ public class CurriculoLogic {
 		}
 		
 		if (descricao.isEmpty() || descricao.length() > 45) {
-			campos.add("Descrição= '" + descricao + "'");
-		}
+			campos.add("Descrição = '" + descricao + "'");
+		} 
 		
 		try {
 			curso = cl.recuperar(curso.getCodigo());
@@ -88,10 +88,8 @@ public class CurriculoLogic {
 		Curriculo curriculo = null;
 		
 		if (descricao.isEmpty() || descricao.length() > 45) {
-			campos.add("Descrição= '" + descricao + "'");
+			campos.add("Descrição = '" + descricao + "'");
 		}
-		
-
 		try {
 			curso = cl.recuperar(curso.getCodigo());
 		} catch (EntityNotExistsException | NullPointerException e) {

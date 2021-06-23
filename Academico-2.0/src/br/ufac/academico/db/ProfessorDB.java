@@ -67,7 +67,6 @@ public class ProfessorDB {
 	public void remover(Professor professor) 
 	throws DataBaseNotConnectedException, DataBaseGenericException 
 	{
-
 		String sqlAtualize = "DELETE FROM professores "
 				+ " WHERE matricula = " + professor.getMatricula() +";";
 

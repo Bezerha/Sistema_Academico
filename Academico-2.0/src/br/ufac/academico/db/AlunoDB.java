@@ -36,10 +36,10 @@ public class AlunoDB {
 				+ "VALUES ("
 				+ 		aluno.getMatricula() 	+","
 				+ "'" + aluno.getNome() 		+ "', "
-				+ "'" + aluno.getFone() 			+ "', "
-                + "'" + aluno.getEndereco() 			+ "', "
+				+ "'" + aluno.getFone() 		+ "', "
+                + "'" + aluno.getEndereco() 	+ "', "
                 + "'" + aluno.getCep() 			+ "', "
-                + "'" + aluno.getSexo() 			+ "', "
+                + "'" + aluno.getSexo() 		+ "', "
 				+ ""+ 	aluno.getCurso().getCodigo() +");";
 
 		cnx.atualize(sqlAtualize);
@@ -84,7 +84,8 @@ public class AlunoDB {
                 + "fone AS 'Telefone', "
                 + "endereco AS 'Endereço', "
 				+ "cep AS 'CEP', "		
-				+ "sexo AS 'Sexo' "
+				+ "sexo AS 'Sexo', "
+				+ "curso AS 'Curso' "
 				+ "FROM alunos "
 				+ "WHERE matricula = " + matricula +";";
 		

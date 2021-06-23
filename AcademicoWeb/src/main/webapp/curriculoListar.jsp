@@ -31,7 +31,6 @@
 %>
 
 <%
-
 	List<Curriculo> curriculos = new ArrayList<Curriculo>();
 	cl.setConexao(cnx);
 
@@ -56,8 +55,8 @@
 %>
 
 <h1>Sistema de Controle Acadêmico</h1>
-<h2>Consulta Alunoes</h2>
-<form action="alunosListar.jsp" method="post">
+<h2>Consulta curriculos</h2>
+<form action="curriculosListar.jsp" method="post">
 <p>
 	Chave: 
 	<select name="chave">
@@ -85,8 +84,8 @@
 		<td><%= c.getDescricao() %></td>		
 		<td><%= c.getCurso().getCodigo() %></td>
 		<td>
-			<a href="alunosEditar.jsp?matricula=<%= c.getCodigo() %>">Editar</a>
-			<a href="alunoEditar.jsp?matricula=<%= c.getCodigo() %>">Excluir</a>
+			<a href="curriculoEditar.jsp?matricula=<%= c.getCodigo() %>">Editar</a>
+			<a href="curriculoEditar.jsp?matricula=<%= c.getCodigo() %>">Excluir</a>
 		</td>
 	</tr>
 <%

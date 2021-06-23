@@ -36,8 +36,7 @@ public class ProfessorLogic {
 		pdb.setConexao(cnx);
 	}
 
-	public void adicionar(long matricula, String nome, long rg, long cpf, 
-		String endereco, String fone, Centro centro) 
+	public void adicionar(long matricula, String nome, long rg, long cpf, String endereco, String fone, Centro centro) 
 	throws DataBaseNotConnectedException, DataBaseGenericException, 
 		EntityAlreadyExistsException, EntityInvalidFieldsException
 	{
@@ -53,10 +52,10 @@ public class ProfessorLogic {
 			campos.add("Nome = '" + nome + "'");
 		}
 		if (rg <= 0) {
-			campos.add("RG = " + rg );
+			campos.add("RG = " + rg + "");
 		}
 		if (cpf <= 0) {
-			campos.add("CPF = " + cpf );
+			campos.add("CPF = " + cpf + "");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
 			campos.add("Endereço = '" + endereco + "'");
@@ -112,7 +111,7 @@ public class ProfessorLogic {
 			campos.add("CPF = " + cpf + "");
 		}
 		if (endereco.isEmpty() || endereco.length() > 60) {
-			campos.add("EndereÃ§o = '" + endereco + "'");
+			campos.add("Endereço = '" + endereco + "'");
 		}
 		if (fone.isEmpty() || fone.length() > 11) {
 			campos.add("Telefone = '" + fone + "'");

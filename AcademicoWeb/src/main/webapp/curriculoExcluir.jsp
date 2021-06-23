@@ -27,7 +27,7 @@
 <%
 	if(request.getParameter("cancelar") != null){
 %>
-<jsp:forward page="alunoListar.jsp" />
+<jsp:forward page="curriculoListar.jsp" />
 <%
 	}
 %>
@@ -43,7 +43,7 @@
 		cll.remover(codigo);
 		
 %>
-<jsp:forward page="alunoListar.jsp" />
+<jsp:forward page="curriculoListar.jsp" />
 <%
 	}
 %>
@@ -60,8 +60,8 @@
 
 %>
 <h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de Aluno</h2>
-<form action="alunoEditar.jsp" method="post">
+<h2>Edição de curriculo</h2>
+<form action="curriculoEditar.jsp" method="post">
 <p>
 	Código: <input type="text" name="matricula" value="<%= c.getCodigo() %>" readonly="readonly" /> <br/>
 	Descrição: <input type="text" name="fone" value="<%= c.getDescricao() %>" /> <br/>

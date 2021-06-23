@@ -28,7 +28,7 @@ public class Academico extends JFrame {
 
 	public Academico(Conexao cnx) {
 
-		setTitle("Sistema de Controle AcadÃªmico");
+		setTitle("Sistema de Controle Acadêmico");
 		setSize(500, 300);
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
