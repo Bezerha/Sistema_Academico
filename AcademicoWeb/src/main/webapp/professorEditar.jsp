@@ -1,7 +1,7 @@
 <%@page import="br.ufac.academico.entity.Centro"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>									
@@ -12,7 +12,7 @@
 <jsp:useBean id="p" scope="page" class="br.ufac.academico.entity.Professor" />
 <head>
 <meta charset="UTF-8">
-<title>Sistema de Controle Acadêmico</title>
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -70,15 +70,15 @@
  	}
 
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de Professor</h2>
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>EdiÃ§Ã£o de Professor</h2>
 <form action="professorEditar.jsp" method="post">
 <p>
-	Matrícula: <input type="text" name="matricula" value="<%= p.getMatricula() %>" readonly="readonly" /> <br/>
+	MatrÃ­cula: <input type="text" name="matricula" value="<%= p.getMatricula() %>" readonly="readonly" /> <br/>
 	Nome: <input type="text" name="nome" value="<%= p.getNome() %>" /> <br/>
 	RG: <input type="text" name="rg" value="<%= p.getRg() %>" /> <br/>
 	CPF: <input type="text" name="cpf" value="<%= p.getCpf() %>" /> <br/>	
-	Endereço: <input type="text" name="endereco" value="<%= p.getEndereco() %>" /> <br/>
+	EndereÃ§o: <input type="text" name="endereco" value="<%= p.getEndereco() %>" /> <br/>
 	Telefone: <input type="text" name="fone" value="<%= p.getFone() %>" /> <br/>
 	Centro: <select name="centro">
 <%

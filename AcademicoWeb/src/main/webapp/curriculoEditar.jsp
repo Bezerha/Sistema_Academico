@@ -2,7 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
@@ -72,7 +72,7 @@
 <%
 	for(Curso cu : cursos){
 %>
-		<option value="<%= c.getCodigo()%>" <%= (c.getCodigo()==c.getCurso().getCodigo())?"selected":"" %> >
+		<option value="<%= cu.getCodigo()%>" <%= (cu.getCodigo()==c.getCurso().getCodigo())?"selected":"" %> >
 			<%= cu.getNome()%>
 		</option>
 <%
