@@ -6,7 +6,7 @@
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
 <jsp:useBean id="cl" scope="page" class="br.ufac.academico.logic.CursoLogic" />
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Sistema de Controle Acadêmico</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
 <%
 	if(request.getParameter("cancelar") != null){
 %>
-<jsp:forward page="cursoIncluir.jsp" />
+<jsp:forward page="cursoListar.jsp" />
 <%
 	}
 %>
@@ -38,7 +38,7 @@
 	
 		cl.adicionar(codigo, nome);
 %>
-<jsp:forward page="cursoIncluir.jsp" />
+<jsp:forward page="cursoListar.jsp" />
 <%
 	}
 %>

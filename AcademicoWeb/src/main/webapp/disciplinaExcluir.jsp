@@ -1,7 +1,7 @@
 <%@page import="br.ufac.academico.entity.Centro"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
 <jsp:useBean id="centro" scope="page" class="br.ufac.academico.entity.Centro" />
 <jsp:useBean id="d" scope="page" class="br.ufac.academico.entity.Disciplina" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -60,13 +60,13 @@
  	}
 
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de Disciplina</h2>
-<form action="disciplinaEditar.jsp" method="post">
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>EdiÃ§Ã£o de Disciplina</h2>
+<form action="disciplinaExcluir.jsp" method="post">
 <p>
 	Codigo: <input type="text" name="codigo" value="<%= d.getCodigo() %>" readonly="readonly" /> <br/>
 	Nome: <input type="text" name="nome" value="<%= d.getNome() %>" /> <br/>
-	CH: <input type="text" name="rg" value="<%= d.getCh() %>" /> <br/>
+	CH: <input type="text" name="ch" value="<%= d.getCh() %>" /> <br/>
 	Centro: <select name="centro" disabled="disabled">
 <%
 	for(Centro c : centros){

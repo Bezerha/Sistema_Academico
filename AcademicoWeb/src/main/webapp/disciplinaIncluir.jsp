@@ -1,7 +1,7 @@
 <%@page import="br.ufac.academico.entity.Centro"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
 <jsp:useBean id="centro" scope="page" class="br.ufac.academico.entity.Centro" />
 <jsp:useBean id="d" scope="page" class="br.ufac.academico.entity.Disciplina" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -54,23 +54,14 @@
 <%
 	List<Centro> centros = cl.recuperarTodosPorNome();
 
- 	if(request.getParameter("codigo") != null &&
- 		request.getParameter("nome") == null &&
- 		request.getParameter("ch") == null &&
- 		request.getParameter("centro") == null)
- 	{
- 		String codigo = request.getParameter("codigo"); 
- 		d = dl.recuperar(codigo);
- 	}
-
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de Disciplina</h2>
-<form action="disciplinaEditar.jsp" method="post">
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>EdiÃ§Ã£o de Disciplina</h2>
+<form action="disciplinaIncluir.jsp" method="post">
 <p>
 	Codigo: <input type="text" name="codigo"  /> <br/>
 	Nome: <input type="text" name="nome"  /> <br/>
-	CH: <input type="text" name="rg"  /> <br/>
+	CH: <input type="text" name="ch"  /> <br/>
 	Centro: <select name="centro">
 <%
 	for(Centro c : centros){

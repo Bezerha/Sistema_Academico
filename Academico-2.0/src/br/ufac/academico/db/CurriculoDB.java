@@ -74,7 +74,7 @@ public class CurriculoDB {
 		
 		String sqlConsulta = "SELECT codigo AS 'Código', "
 				+ "curso AS 'Curso', "
-                + "descricao AS 'Descrição', "
+                + "descricao AS 'Descrição' "
 				+ "FROM curriculos "
 				+ "WHERE codigo = " + codigo +";";
 		
@@ -85,7 +85,7 @@ public class CurriculoDB {
 			
 		try {
 			if(rs.next()) {				
-				curso = cdb.recuperar(rs.getInt(3));
+				curso = cdb.recuperar(rs.getInt(2));
 				curriculo = new Curriculo(rs.getLong(1), curso, 
 							rs.getString(3));
 			}else {
@@ -104,7 +104,7 @@ public class CurriculoDB {
 		
 		String sqlConsulta = "SELECT codigo AS 'Código', "
 				+ "curso AS 'Curso', "
-				+ "descricao AS 'Descrição', "
+				+ "descricao AS 'Descrição' "
 				+ "FROM curriculos;";
 
 		List<Curriculo> curriculos = new ArrayList<Curriculo>();
@@ -115,7 +115,7 @@ public class CurriculoDB {
 		
 		try {
 			while(rs.next()) {
-				curso = cdb.recuperar(rs.getInt(3));
+				curso = cdb.recuperar(rs.getInt(2));
 				curriculo = new Curriculo(rs.getLong(1), curso, 
 							rs.getString(3));
 				curriculos.add(curriculo);
@@ -136,9 +136,9 @@ public class CurriculoDB {
 		
 		String sqlConsulta = "SELECT codigo AS 'Código', "
 				+ "curso AS 'Curso', "
-				+ "descricao AS 'Descrição', "
+				+ "descricao AS 'Descrição' "
 				+ "FROM curriculos "
-				+ "ORDER BY nome;";
+				+ "ORDER BY descricao;";
 
 		List<Curriculo> curriculos = new ArrayList<Curriculo>();
 		Curriculo curriculo = null;
@@ -148,7 +148,7 @@ public class CurriculoDB {
 		
 		try {
 			while(rs.next()) {
-				curso = cdb.recuperar(rs.getInt(3));
+				curso = cdb.recuperar(rs.getInt(2));
 				curriculo = new Curriculo(rs.getLong(1), curso, 
 							rs.getString(3));
 				curriculos.add(curriculo);
@@ -183,7 +183,7 @@ public class CurriculoDB {
 		try {
 			while(rs.next()) {
 				
-				curso = cdb.recuperar(rs.getInt(3));
+				curso = cdb.recuperar(rs.getInt(2));
 				curriculo = new Curriculo(rs.getLong(1), curso, 
 							rs.getString(3));
 				curriculos.add(curriculo);

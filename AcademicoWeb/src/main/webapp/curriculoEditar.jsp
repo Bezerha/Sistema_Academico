@@ -1,8 +1,8 @@
 <%@page import="br.ufac.academico.entity.Curso"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@page errorPage="erro.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
@@ -11,8 +11,8 @@
 <jsp:useBean id="curso" scope="page" class="br.ufac.academico.entity.Curso" />
 <jsp:useBean id="c" scope="page" class="br.ufac.academico.entity.Curriculo" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -40,8 +40,8 @@
 
 	if(request.getParameter("confirmar") != null){
 		long codigo = Long.parseLong(request.getParameter("codigo")); 
-		String cod = request.getParameter("curso");
-		curso = cl.recuperar(Integer.parseInt(cod));
+		int cod = Integer.parseInt(request.getParameter("curso"));
+		curso = cl.recuperar(cod);
 		String descricao = request.getParameter("descricao");
 		cll.atualizar(codigo, curso, descricao);
 		
@@ -62,12 +62,12 @@
  	}
 
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de curriculo</h2>
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>EdiÃ§Ã£o de Curriculo</h2>
 <form action="curriculoEditar.jsp" method="post">
 <p>
-	Código: <input type="text" name="matricula" value="<%= c.getCodigo() %>" readonly="readonly" /> <br/>
-	Descrição: <input type="text" name="fone" value="<%= c.getDescricao() %>" /> <br/>
+	CÃ³digo: <input type="text" name="codigo" value="<%= c.getCodigo() %>" readonly="readonly" /> <br/>
+	DescriÃ§Ã£o: <input type="text" name="descricao" value="<%= c.getDescricao() %>" /> <br/>
 	Curso: <select name="curso">
 <%
 	for(Curso cu : cursos){

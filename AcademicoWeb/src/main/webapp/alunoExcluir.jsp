@@ -2,7 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
@@ -11,7 +11,7 @@
 <jsp:useBean id="curso" scope="page" class="br.ufac.academico.entity.Curso" />
 <jsp:useBean id="a" scope="page" class="br.ufac.academico.entity.Aluno" />
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Sistema de Controle Acadêmico</title>
 </head>
 <body>

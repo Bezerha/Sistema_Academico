@@ -1,17 +1,16 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.ufac.academico.entity.Curso"%>
-
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
 <jsp:useBean id="cul" scope="page" class="br.ufac.academico.logic.CursoLogic" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -55,7 +54,7 @@
 	}
 %>
 
-<h1>Sistema de Controle Acadêmico</h1>
+<h1>Sistema de Controle AcadÃªmico</h1>
 <h2>Consulta Cursos</h2>
 <form action="cursoListar.jsp" method="post">
 <p>
@@ -71,7 +70,7 @@
 </p>
 </form>
 <table border="1">
-	<tr><th>Codigo</th><th>Nome</th><th>Operações</th></tr>
+	<tr><th>Codigo</th><th>Nome</th><th>OperaÃ§Ãµes</th></tr>
 <%
 	for(Curso c : cursos){
 %>

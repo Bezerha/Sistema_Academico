@@ -1,8 +1,7 @@
 <%@page import="br.ufac.academico.entity.Curso"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@page errorPage="erro.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
@@ -11,8 +10,8 @@
 <jsp:useBean id="curso" scope="page" class="br.ufac.academico.entity.Curso" />
 
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -53,12 +52,12 @@
 <%
 	List<Curso> cursos = cl.recuperarTodosPorNome();
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Inclusão de curriculo</h2>
-<form action="curriculoIncluir" method="post">
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>InclusÃ£o de Curriculo</h2>
+<form action="curriculoIncluir.jsp" method="post">
 <p>
-	Código: <input type="text" name="codigo" /> <br/>
-	Descrição: <input type="text" name="descricao" /> <br/>
+	CÃ³digo: <input type="text" name="codigo" /> <br/>
+	DescriÃ§Ã£o: <input type="text" name="descricao" /> <br/>
 	Curso: <select name="curso">
 <%
 	for(Curso c : cursos){

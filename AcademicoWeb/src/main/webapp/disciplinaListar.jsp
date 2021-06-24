@@ -1,16 +1,16 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.ufac.academico.entity.Disciplina"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
 <jsp:useBean id="dl" scope="page" class="br.ufac.academico.logic.DisciplinaLogic" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -55,7 +55,7 @@
 	}
 %>
 
-<h1>Sistema de Controle Acadêmico</h1>
+<h1>Sistema de Controle AcadÃªmico</h1>
 <h2>Consulta Disciplinas</h2>
 <form action="disciplinaListar.jsp" method="post">
 <p>
@@ -75,7 +75,7 @@
 		<th>Codigo</th>
 		<th>Nome</th>
 		<th>Centro</th>
-		<th>Operações</th>
+		<th>OperaÃ§Ãµes</th>
 	</tr>
 <%
 	for(Disciplina d : disciplinas){
@@ -85,8 +85,8 @@
 		<td><%= d.getNome() %></td>		
 		<td><%= d.getCentro().getSigla() %></td>
 		<td>
-			<a href="discidlinaEditar.jsp?codigo=<%= d.getCodigo() %>">Editar</a>
-			<a href="discidlinaExcluir.jsp?codigo=<%= d.getCodigo() %>">Excluir</a>
+			<a href="disciplinaEditar.jsp?codigo=<%= d.getCodigo() %>">Editar</a>
+			<a href="disciplinaExcluir.jsp?codigo=<%= d.getCodigo() %>">Excluir</a>
 		</td>
 	</tr>
 <%

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -7,8 +7,8 @@
 <jsp:useBean id="cl" scope="page" class="br.ufac.academico.logic.CentroLogic" />
 <jsp:useBean id="c" scope="page" class="br.ufac.academico.entity.Centro" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -49,8 +49,8 @@
 		c = cl.recuperar(request.getParameter("sigla"));
 
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Exclusão de Centro</h2>
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>ExclusÃ£o de Centro</h2>
 <form action="centroExcluir.jsp" method="post">
 <p>
 	Sigla: <input type="text" name="sigla" value="<%= c.getSigla() %>" readonly="readonly" /> <br/>

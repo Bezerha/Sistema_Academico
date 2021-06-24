@@ -6,7 +6,7 @@
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
 <jsp:useBean id="cl" scope="page" class="br.ufac.academico.logic.CentroLogic" />
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Sistema de Controle Acadêmicooo</title>
 </head>
 <body>

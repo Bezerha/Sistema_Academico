@@ -18,7 +18,7 @@ public class CursoLogic {
 
 	public CursoLogic(Conexao cnx) {
 
-		this.cdb = new CursoDB(cnx);
+		cdb = new CursoDB(cnx);
 
 	}
 	
@@ -38,7 +38,7 @@ public class CursoLogic {
 				Curso curso = null;
 				
 				if (codigo <=0) {
-					campos.add("Sigla = '" + codigo + "'");
+					campos.add("Código = " + codigo + "");
 				}
 				if (nome.isEmpty() || nome.length() > 50) {
 					campos.add("Nome = '" + nome + "'");
@@ -51,7 +51,7 @@ public class CursoLogic {
 				try {
 					curso  = recuperar(codigo);
 					if(curso != null) {
-						throw new EntityAlreadyExistsException("Curso [codigo = '" + codigo + "']");
+						throw new EntityAlreadyExistsException("Curso [codigo = " + codigo + "]");
 					}			
 				} catch (EntityNotExistsException e) {
 					curso = new Curso(codigo, nome);

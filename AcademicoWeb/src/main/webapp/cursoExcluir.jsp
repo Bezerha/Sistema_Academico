@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@page errorPage="erro.jsp" %>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <jsp:useBean id="cnx" scope="session" class="br.ufac.academico.db.Conexao" />
 <jsp:useBean id="cl" scope="page" class="br.ufac.academico.logic.CursoLogic" />
 <jsp:useBean id="c" scope="page" class="br.ufac.academico.entity.Curso" />
 <head>
-<meta charset="ISO-8859-1">
-<title>Sistema de Controle Acadêmico</title>
+<meta charset="UTF-8">
+<title>Sistema de Controle AcadÃªmico</title>
 </head>
 <body>
 
@@ -34,7 +34,8 @@
 
 	if(request.getParameter("confirmar") != null){
 		
-		int codigo = Integer.parseInt(request.getParameter("codigo")); 
+		String cod = request.getParameter("codigo");
+		int codigo = Integer.parseInt(cod); 
 	
 		cl.remover(codigo);
 %>
@@ -44,20 +45,16 @@
 %>
 
 <%
-	if (request.getParameter("codigo") != null && 
-		request.getParameter("nome") == null){
+	if (request.getParameter("codigo") != null && request.getParameter("nome") == null){
 		
-		
-		int codigo = Integer.parseInt(request.getParameter("codigo")); 
-		
-		cl.remover(codigo);
+		c = cl.recuperar(Integer.parseInt(request.getParameter("codigo")));
 
 %>
-<h1>Sistema de Controle Acadêmico</h1>
-<h2>Edição de Curso</h2>
-<form action="cursoEditar.jsp" method="post">
+<h1>Sistema de Controle AcadÃªmico</h1>
+<h2>EdiÃ§Ã£o de Curso</h2>
+<form action="cursoExcluir.jsp" method="post">
 <p>
-	Código: <input type="text" name="codigo" value="<%= c.getCodigo() %>" readonly="readonly" /> <br/>
+	CÃ³digo: <input type="text" name="codigo" value="<%= c.getCodigo() %>" readonly="readonly" /> <br/>
 	Nome: <input type="text" name="nome" value="<%= c.getNome() %>" />
 </p>
 <p>	
